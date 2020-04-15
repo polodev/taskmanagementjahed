@@ -8,9 +8,18 @@
 
 * date (unique)
 * task_list (json) (
-  1h php -> true
-  1h english -> true
-  1h math -> true
+  task_slug => [
+    name => '1h php',
+    is_done => true/false,
+    total_time => '',
+    other_data => '',
+
+  ],
 )
+
+
+
+# make crud for daily_task
+# make crud for task_management
 
 

@@ -16,6 +16,7 @@ class CreateDailyTasksTable extends Migration
         Schema::create('daily_tasks', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->boolean('is_enable');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
