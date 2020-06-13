@@ -25,3 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/daily_task', 'DailyTaskController');
 Route::resource('/task_management', 'TaskManagementController');
+
+/**
+ * Json Route
+ */

@@ -8,6 +8,8 @@ use Spatie\Sluggable\SlugOptions;
 
 class DailyTask extends Model
 {
+  use HasSlug;
+
   protected $guarded = [];
   public function user()
   {
@@ -16,7 +18,7 @@ class DailyTask extends Model
   public function getSlugOptions() : SlugOptions
   {
     return SlugOptions::create()
-        ->generateSlugsFrom('name')
+        ->generateSlugsFrom('title')
         ->saveSlugsTo('slug');
   }
 }

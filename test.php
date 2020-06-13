@@ -15,5 +15,8 @@ $arr2 = [
 
 $final_array = array_merge($arr1, $arr2);
 
-var_export($final_array);
+// var_export($final_array);
+
+$r = rand(0, 1);
+print_r($r);
 

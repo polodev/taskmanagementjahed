@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DailyTask;
 use Illuminate\Http\Request;
 
 class DailyTaskController extends Controller
@@ -13,7 +14,10 @@ class DailyTaskController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = auth()->id();
+        $tasks = DailyTask::where('user_id', $user_id)->get();
+        return $tasks;
+        return view('daily_task.index', compact('tasks'));
     }
 
     /**

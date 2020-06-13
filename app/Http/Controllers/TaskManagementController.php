@@ -13,7 +13,7 @@ class TaskManagementController extends Controller
      */
     public function index()
     {
-        //
+        return view('task_management.index');
     }
 
     /**
